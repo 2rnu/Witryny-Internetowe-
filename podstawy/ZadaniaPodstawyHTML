@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Przykładowy program</title>
+    </head>
+    <body>
+        <script>
+            /*
+                Zadanie 1
+                Napisz funkcje, która wyświetli liczby od 0 do 10.
+
+                Zadanie 2 
+                Napisz fukcje, która przyjmie liczbę i wyświetli informacje, czy jset ona parzysta, czy nieparzysta.
+
+                Zadanie 3
+                Napisz funkcję, która przyjmnie dwie wartości i wyświtli:
+
+                *informację, czy wartości, którą przyjmie są równe, czy nie
+                *informację, czy wartości są identyczne, czy nie
+
+                Zadanie 4
+                Napisz fukcję, która przyjmnie liczbę i wyświetli nazwę dnia tygodnia
+            */
+            
+            document.writeln("Zadanie 1");
+            document.writeln("<br/>");
+
+            function FuckcjaZadanie1()
+            {
+                for (i=0; i<10; i++)
+                {
+                    document.writeln(i);
+                }
+                document.writeln(i);
+            }
+
+
+        </script>
+        
+    </body>
+</html>
