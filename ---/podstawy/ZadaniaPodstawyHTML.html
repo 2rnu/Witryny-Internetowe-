@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Przykładowy program</title>
+    </head>
+    <body>
+        <script>
+            /*
+                Zadanie 1
+                Napisz funkcje, która wyświetli liczby od 0 do 10.
+
+                Zadanie 2 
+                Napisz fukcje, która przyjmie liczbę i wyświetli informacje, czy jset ona parzysta, czy nieparzysta.
+
+                Zadanie 3
+                Napisz funkcję, która przyjmnie dwie wartości i wyświtli:
+
+                *informację, czy wartości, którą przyjmie są równe, czy nie
+                *informację, czy wartości są identyczne, czy nie
+
+                Zadanie 4
+                Napisz fukcję, która przyjmnie liczbę i wyświetli nazwę dnia tygodnia
+
+                Zadanie 5*
+                Napisz funkcję, która wyświetli tabliczkę mnożenia od "0 razy 0 = 0" do "10 razy 10 = 100"
+
+                Zadanie 6*
+                Napisz funkcję, która pobierze liczbę i wyświetli ją w systemie binarnym.
+            */
+            
+            document.writeln("Zadanie 1")
+            document.writeln("<br/>")
+
+            function FuckcjaZadanie1()
+            {
+                for (i=0; i<10; i++)
+                {
+                    document.writeln(i);
+                }
+                document.writeln(i);
+            }
+
+            FuckcjaZadanie1();
+
+            document.writeln("<br/>")
+            document.writeln("<br/>")
+            document.writeln("<br/>")
+
+            document.writeln("Zadanie 2")
+            document.writeln("<br/>")
+
+            function ParzystaNieParzysta()
+            {
+                if(i%2)
+                {
+                    document.writeln("Liczba ta jest nieparzysta")
+                }
+                else
+                {
+                    document.writeln("Liczba ta jest parzsyta")
+                }
+            }
+
+            ParzystaNieParzysta(6)
+            document.writeln("<br/>")
+            document.writeln("<br/>")
+            document.writeln("<br/>")
+
+            document.writeln("Zadanie 3")
+            document.writeln("<br/>")
+
+            function RowneNieRowneIdentyczneNieIdentyczne(LiczbaPierwsza, LiczbaDruga)
+            {
+                if(LiczbaPierwsza==LiczbaDruga)
+                {
+                    document.writeln("Liczby te są równe i zarazem identyczne.")
+                    document.writeln("<br/>")
+                }
+                else
+                {
+                    document.writeln("Liczby te raczej nie są równe i są nie identyczne")
+                    document.writeln("<br/>")
+                }
+
+            }
+
+            RowneNieRowneIdentyczneNieIdentyczne(12,12)
+            document.writeln("<br/>")
+            document.writeln("<br/>")
+
+            document.writeln("Zadanie 4")
+            document.writeln("<br/>")
+
+            function DayInWeek(Day)
+            {
+                switch(Day)
+                {
+                    case 1:
+                        document.writeln("You choose 1, that is Monday");
+                        break;
+                   
+                    case 2:
+                        document.writeln("You choose 2, that is Tuesday");
+                        break;
+                       
+                    case 3:
+                        document.writeln("You choose 3, that is Wednesday");
+                        break;
+                   
+                    case 4:
+                        document.writeln("You choose 4, that is Thursday");
+                        break;
+                       
+                    case 5:
+                        document.writeln("You choose 5, that is Friday");
+                        break;
+                    
+                    case 6:
+                        document.writeln("You choose 6, that is Saturday");
+                        break;
+
+                    case 0:
+                        
+                    case 7 :
+                        document.writeln("You choose 7 or 0, that is Sunday");
+                        break;
+                    
+
+                    default:
+                        document.writeln("Wrong number! Type other number and try again!")
+
+               
+                    }
+
+
+            }
+
+            DayInWeek(7)
+
+
+
+        </script>
+        
+    </body>
+</html>
