@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html> 
+    
+<head>
+    <title>Przykładowy program</title>
+</head>
+
+    <body>
+
+        <script>
+
+            function ShowInfo()
+            {
+                document.writeln("Hello World");
+                document.writeln("<br/>");
+            }
+
+            ShowInfo();
+            ShowInfo();
+            
+            function GetParametr(parametr)
+            {
+                document.writeln(parametr);
+                document.writeln("<br/>");
+            }
+
+            GetParametr("Cześć świecie!!!");
+            GetParametr("Już prawie koniec lekcji.");
+            GetParametr(125);
+
+            var zm1 = 5;
+            let zm2 = 7;
+            //zmienna globalna, dostępna w całym kodzie,
+            //nie ma znaczenia gdzie została zadeklarowana
+            //patrz na zm6
+
+            zm3 = 9;
+
+            function WyswietlZmienne()
+            {
+                document.writeln("Zm1 " + zm1);
+                document.writeln("<br/>");
+                document.writeln("Zm2 " + zm2);
+                document.writeln("<br/>");
+                document.writeln("Zm3 " + zm3);
+                document.writeln("<br/>");
+            }
+            WyswietlZmienne();
+            
+            function FunkcjeZeZmiennymi()
+            {
+                //zmienne zm4 i zm5 dostępne tylko w tej funkcji
+                //poza funkcją nie istnieje
+
+                var zm4 = 99;
+                let zm6 = 55
+                //ta zmienna jest globalna
+                //i dostępna poza funkcją
+            }
+
+            FunkcjeZeZmiennymi();
+               
+                //zmienne zm4 i zm5 nie istnieją
+                /*document.writeln("Zm4" + Zm4);
+                document.writeln("<br/>"); */
+                /*document.writeln("Zm5" + Zm5);
+                document.writeln("<br/>"); */
+                document.writeln("Zm6" + Zm6);
+                document.writeln("<br/>");
+
+                function WytlumaczenieVarLet();
+                {
+                    for(i = 0, i < 10, i++);
+                    {
+                        document.writeln(i);
+                        document.writeln("<br/>");
+                    }
+                    document.writeln(i);
+                }
+            
+
+            FunkcjaPetlowa();
+            //document.wtiteln(i);
+
+            function FunkcjaDwaParametry(parameter,parameter2)
+            {
+                document.writeln(parametr);
+                document.writeln("<br/>");
+                document.writeln(parametr2);
+                document.writeln("<br/>");
+            }
+
+            FunkcjaDwaParametry("Ala ma kota", 12345);
+            FunkcjaDwaParametry("Ala ma kota");
+            FunkcjaDwaParametry();
+
+            function Suma(liczbPierwsza, liczbaDruga)
+            {
+                var wynik;
+                wynik = liczbPierwsza + liczbaDruga;
+                return wynik;
+            }
+
+            var wynikFunkcji = Suma(15, 6);
+            document.writeln(wynikFunkcji);
+            document.writeln("<br/>");
+
+            function Odejmowanie(liczbPierwsza, liczbaDruga)
+            {
+                var wynik;
+                wynik = liczbPierwsza - liczbaDruga;
+                return wynik;
+            }
+
+            var wynikFunkcji = Odejmowanie(15, 6);
+            document.writeln(wynikFunkcji);
+            document.writeln("<br/>");
+
+
+
+        </script>
+    </body>
+</html>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
