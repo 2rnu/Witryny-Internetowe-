@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Przykładowy program</title>
+    </head>
+    <body>
+        <script>
+            //obiekty typu String
+            let tekst = "Ala ma kota";
+            document.write("'" + tekst + "' ma długość "
+            + tekst.length + "<br/>");
+            
+            let podtekst = tekst.substring(7, 11);
+            document.write(podtekst + "<br/>");
+
+            document.write(tekst[5] + "<br/>");
+            document.write(tekst.toUpperCase() + "<br/>");
+            document.write(tekst.toLowerCase() + "<br/>");
+
+            let nowyTekst = new String("Nowy tekst");
+
+            //obiekty typu Array
+            let tab1 = [];
+            let tab2 = new Array();
+            let tab3 = new Array(5);
+
+            tab1 = ["Ola", "Ala", "Ela"];
+            document.write("Zawartość tablicy oryginalna:<br/>");
+            document.write(tab1.join() + "<br/>");
+            tab1.sort();
+            document.write(tab1.join() + "<br/>");
+
+            tab1 = [5, 1, 12, 8];
+            document.write(tab1.join() + "<br/>");
+            tab1.sort();
+            document.write(tab1.join() + "<br/>");
+
+            function PorownajLiczby(a, b)
+            {
+                /*
+                    1 - a > b
+                    0 - a == b
+                    -1 - a < b
+                */
+                if (a > b)
+                    return 1;
+                if (a == b)
+                    return 0;
+                if (a < b)
+                    return -1;
+            }
+            tab1.sort(PorownajLiczby);
+            document.write(tab1.join() + "<br/>");
+
+            function BubbleSort(tab/*, funkcjaPorownania*/)
+            {
+                for (let i = 0; i < tab.length - 1; i++)
+                    for (let j = 0; j < tab.length-1; j++)
+                        if (tab[j].cena > tab[j+1].cena)
+                        //if (funkcjaPorownania(tab[j], tab[j+1]))
+                        {
+                            let tmp = tab[j];
+                            tab[j] = tab[j+1];
+                            tab[j+1] = tmp;
+                        }
+            }
+        
+        //obiekt typu Date
+        let data = new Date();
+        document.write(data.toString() + "<br/>");
+        document.write(data.toLocaleString() + "<br/>");
+        document.write(data.toUTCString() + "<br/>");
+
+        document.write("Rok: " + data.getFullYear() + "<br/>");
+        document.write("Miesiąc: " + data.getMonth() + "<br/>");
+        document.write("Dzień tygodnia: " + data.getDay() + "<br/>");
+        document.write("Dzień miesiąca: " + data.getDate() + "<br/>");
+        document.write("Godzina: " + data.getHours() + "<br/>");
+        document.write("Minuta: " + data.getMinutes() + "<br/>");
+        document.write("Sekunda: " + data.getSeconds() + "<br/>");
+        document.write("Milisekunda: " + data.getMilliseconds() + "<br/>");
+        
+        /*
+            Zadanie
+            Napisz funkcję która wyświetli na stronie informację
+            o czasie.
+
+            Dzisiaj jest:
+            Czwartek, 27 październik 2022 roku
+            Godzina: 09:33:02
+        */
+
+        </script>
+    </body>
+</html>
