@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zadanie</title>
+    </head>
+    <body>
+        <script>
+            /*
+                Zadanie 1
+                Napisz funkcję, która wyświetli liczby od 0 do 10.
+
+                Zadanie 2
+                Napisz funkcję, która przyjmie liczbę i wyświetli
+                informację czy jest ona parzysta czy nieparzysta.
+
+                Zadanie 3
+                Napisz funkcję, która przyjmie dwie wartości
+                i wyświetli:
+                * informację czy wartości są równe czy nie
+                * informację czy wartości są identyczne czy nie
+                 
+                Zadanie 4
+                Napisz funkcję, która przymie liczbę 
+                i wyswietli nazwę dnia tygodnia.
+
+                Zadanie 5*
+                Napisz funkcję, która wyświetli tabliczkę mnożenia
+                od "0*0 = 0" do "10 * 10 = 100".
+
+                Zadanie 6*
+                Napisz funkcję, która pobierze liczbę
+                i wyświetli ją w systemie binarnym.
+            */
+
+
+            function Pokaz()
+            {
+                document.writeln("ZADANIE NR.1");
+                document.writeln("===========================================");
+                for(let i = 0; i < 11; i++)
+                {
+                    document.writeln("Liczba: " + i);
+                    document.writeln("<br/>");
+                }
+            }
+            Pokaz()
+           
+            document.writeln("<br/>");
+            document.writeln("<br/>");
+
+            function LetsSee()
+            {
+                document.writeln("ZADANIE NR.2");
+                document.writeln("===========================================");
+                document.writeln("<br/>");
+
+                if (Liczba%2==0)
+                {
+                    document.writeln("Liczba jest parzysta");
+                    document.writeln("<br/>");
+                }
+                else
+                {
+                    document.writeln("Liczba ta nie jest parzysta");
+                    document.writeln("<br/>");
+                }
+            }
+
+            LetsSee(Liczba=11)
+
+            document.writeln("<br/>");
+            document.writeln("<br/>");
+
+            function IdenticalNot(Liczba1, Liczba2)
+            {
+                document.writeln("ZADANIE NR.3");
+                document.writeln("<br/>");
+                document.writeln("===========================================");
+                document.writeln("<br/>");
+
+                if (Liczba1==Liczba2)
+                {
+                    document.writeln("Podane liczby są sobie równe i są one identyczne");
+                    document.writeln("<br/>");
+                }
+                else
+                {
+                    document.writeln("Podane liczby nie są sobie równe i nie są one identyczne");
+                    document.writeln("<br/>");
+                }
+
+
+            }
+
+            IdenticalNot(Liczba1=12, Liczba2=12)
+
+            document.writeln("<br/>");
+            document.writeln("<br/>");
+
+            function Day(Day)
+            {
+                document.writeln("ZADANIE NR.4");
+                document.writeln("<br/>");
+                document.writeln("===========================================");
+                document.writeln("<br/>");
+                
+                switch (Day)
+                {
+                    case 1:
+                        document.writeln("Wybrałeś 1, czyli Poniedziałek");
+                        break;
+
+                    case 2:
+                        document.writeln("Wybrałeś 2, czyli Wtorek");
+                        break;
+
+                    case 3:
+                        document.writeln("Wybrałeś 3, czyli Środa");
+                        break;
+
+                    case 4:
+                        document.writeln("Wybrałeś 4, czyli Czwartek");
+                        break;
+
+                    case 5:
+                        document.writeln("Wybrałeś 5, czyli Piątek");
+                        break;
+
+                    case 6:
+                        document.writeln("Wybrałeś 6, czyli Sobotę");
+                        break;
+
+                    case 7:
+                        document.writeln("Wybrałeś 7, czyli Niedzielę");
+                    
+                    case 0:
+                        document.writeln("Wybrałeś 0, czyli Niedzielę");
+                    
+                    default:
+                        document.writeln("Nie podałeś prawidłowej liczny od 0 do 7, spróbuj ponownie");
+                        break;
+
+
+                }
+            }
+            Day(5)
+
+            function zadanie5()
+            {
+                var wynik;
+                for(var i = 0; i < 11; i++)
+                {
+                    document.write("<br>")
+                    for(var j = 0; j < 11; j++)
+                    {
+                        wynik = i*j;
+                        document.writeln(i + " * " + j + " " + " = " + wynik);
+                        document.write("<br>");
+                    }
+                }
+
+            }
+            document.write("<br>");
+            document.write("<br>");
+            zadanie5();
+
+            function zadanie6(parametr)
+            {
+                document.write(parametr + " na binarny = " + parametr.toString(16));
+            }
+            document.write("<br>");
+            document.write("<br>");
+            zadanie6(15);
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
