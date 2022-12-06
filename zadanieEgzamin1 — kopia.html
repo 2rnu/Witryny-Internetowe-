@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Przykładowy program</title>
+    </head>
+    <body>
+        <p>Podaj imię:</p>
+        <input type="text" id="nameId" />
+        <p>Podaj wiek</p>
+        <input type="text" id="ageId"/>
+        <br/>
+        <input type="button" value="Wyświetl informację" onclick="getInfo()"/>
+        <br/>
+        <div id="helloId">
+
+            Tutaj po naciśnięciu przycisku ma pojawić się:
+            * jesli walidacja przejdzie poprawnie:
+                "Witaj 'imie' na stronie" - gdzie 'imie' jest to wartość z pola wprowadzanego
+            * jeśli walidacja nie przejdzie poprawnie:
+                to powinien znaleść się odpowiedni komunikat informujący co jest nie tak
+
+
+        </div>
+        <div id="legalAgeId">
+            Imię:
+            * Ma mieć więcej niż 2 znaki oraz mniej niż 50 liter
+            * Nie może składać się z cyfr lub znaków
+
+            Wiek:
+            * Wiek nie może być ujemny
+            * Nie może wynosić mniej niż 1 rok
+            * Nie może wynosić więcej niż 122 lata
+
+            Walidacja:
+            * W przypadku nie podania niczego musi się upomnić
+            * W przypadku za któtkeigo lub za daługiego imienia, musi poinformować, że imię jest za długie/krótkie i poinformować o przedziale i wymaganiach
+            * W przypadku zbyt młoego wieku ma wyświetlij informacje, że jesteś niepełnoletni,  i na odwrót.
+            * W przypadku podania niepoprawnych informacji musi wyświetlić wymogi etc.
+            
+            
+            
+            
+            Tutaj po naciśnięciu przycisku ma pojawić się:
+            * jesli walidacja przejdzie poprawnie:
+                "Jesteś pełnoletni/niepełnoletni" - w zależności od wieku
+            * jeśli walidacja nie przejdzie poprawnie: 
+                nic
+        </div>
+
+        <br/>
+        <div>Zasady:<br/>
+            * Poprawne formatowanie kodu<br/>
+            * Czytelność identyfikatorów<br/>
+            * DRY - don't repeat yourself<br/>
+            * KISS - Keep it simple stupid<br/>
+            * YAGNI - You aren't gonna need it<br/>
+            * SOLID - S - Single responsibility principle <br/>
+        </div>
+
+        <script>
+
+            name = document.getElementById("nameId").value;
+            age = document.getElementById("ageId").value
+
+            function getInfo()
+            {
+                document.getElementById("name").i
+                
+            }
+
+
+        </script>
+    </body>
+</html>
+
+
