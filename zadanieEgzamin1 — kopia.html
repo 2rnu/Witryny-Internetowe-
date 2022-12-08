@@ -1,76 +1,81 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Przykładowy program</title>
+        <title>Walidacje zadania</title>
     </head>
     <body>
         <p>Podaj imię:</p>
-        <input type="text" id="nameId" />
+        <input type="text" id="nameId"/>
         <p>Podaj wiek</p>
         <input type="text" id="ageId"/>
         <br/>
-        <input type="button" value="Wyświetl informację" onclick="getInfo()"/>
+        <input type="button" value="Wyświetl informację" onclick="getInfo()" />
         <br/>
         <div id="helloId">
 
-            Tutaj po naciśnięciu przycisku ma pojawić się:
-            * jesli walidacja przejdzie poprawnie:
-                "Witaj 'imie' na stronie" - gdzie 'imie' jest to wartość z pola wprowadzanego
-            * jeśli walidacja nie przejdzie poprawnie:
-                to powinien znaleść się odpowiedni komunikat informujący co jest nie tak
-
-
         </div>
         <div id="legalAgeId">
-            Imię:
-            * Ma mieć więcej niż 2 znaki oraz mniej niż 50 liter
-            * Nie może składać się z cyfr lub znaków
-
-            Wiek:
-            * Wiek nie może być ujemny
-            * Nie może wynosić mniej niż 1 rok
-            * Nie może wynosić więcej niż 122 lata
-
-            Walidacja:
-            * W przypadku nie podania niczego musi się upomnić
-            * W przypadku za któtkeigo lub za daługiego imienia, musi poinformować, że imię jest za długie/krótkie i poinformować o przedziale i wymaganiach
-            * W przypadku zbyt młoego wieku ma wyświetlij informacje, że jesteś niepełnoletni,  i na odwrót.
-            * W przypadku podania niepoprawnych informacji musi wyświetlić wymogi etc.
             
+            <p>Podaj wiek w celu weryfikacji twojego wieku</p>
             
-            
-            
-            Tutaj po naciśnięciu przycisku ma pojawić się:
-            * jesli walidacja przejdzie poprawnie:
-                "Jesteś pełnoletni/niepełnoletni" - w zależności od wieku
-            * jeśli walidacja nie przejdzie poprawnie: 
-                nic
+            <input type="text" id="legalAgeId"/><br>
+            <input type="button" value = "Legalny wiek" onclick="ofAge()">
         </div>
 
-        <br/>
-        <div>Zasady:<br/>
-            * Poprawne formatowanie kodu<br/>
-            * Czytelność identyfikatorów<br/>
-            * DRY - don't repeat yourself<br/>
-            * KISS - Keep it simple stupid<br/>
-            * YAGNI - You aren't gonna need it<br/>
-            * SOLID - S - Single responsibility principle <br/>
-        </div>
 
         <script>
 
-            name = document.getElementById("nameId").value;
-            age = document.getElementById("ageId").value
-
             function getInfo()
             {
-                document.getElementById("name").i
+                let age = document.getElementById("ageId").value
+
+                if (age == "")
+                {
+                    alert("Nie podano wieku!")
+                }
+                else if (age > 140 && age < 1)
+                {
+                    alert("Podałeś zbyt duży/mały wiek! Możesz podać od 1 do 140 lat.")
+                }
+                else if(isNaN(parseInt(age)))
+                {
+                    alert("Podałeś coś innego, niż liczbę!")
+                }
+                else
+                {
+                    alert("Podałeś poprawny wiek!")
+                }
+
+                let name = document.getElementById("nameId").value
                 
+                if(name == "")
+                {
+                   alert("Nie podałes żadnego imienia! Napisz swoje imię i spróbuj ponownie.")
+                }
+                else if(name.Text.lenght < 2 && name.Text.lenght > 50)
+                {
+                    document.write("Podałeś zbyt długi/krótki wiek!")
+                }
             }
 
-
+            function ofAge()
+            {
+                let legalAge = document.getElementById("legalAgeId").value
+                
+                if(legalAge >= 18)
+                {
+                    alert("Jesteś pełnoletni!")
+                }
+                else if(legalAge < 18)
+                {
+                    document.write("Jesteś niepełnoletni!")
+                }
+                else
+                {
+                    alert("BŁĄD! Sprawdz jaki błąd popełniłeś!")
+                }
+            }
+            
         </script>
     </body>
 </html>
-
-
