@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pl=PL">
+	<head>
+	<meta charset="UTF-8">
+	<title>Galeria</title>
+                    <link rel="stylesheet" href="styl7.css">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+                    <div id="banner">
+                              <h2>Galeria miejsc ciekawych</h2>
+
+		</div>
+
+                    <div id="main">
+                              
+                    <img src="lanzarotte.jpg" alt="galeria">
+
+                    </div>
+
+                    <div id="blockL">
+                              <h3>Przeglądaj zdjęcia</h3>
+
+                              <img src="lanzarotte.jpg" alt="lanzarotte" id="photo1" onclick="ChangeOnClick(document.getElementById('photo1').alt)">
+                              <img src="pekin.jpg" alt="pekin" id="photo2" onclick="ChangeOnClick(document.getElementById('photo2').alt)">
+                              <img src="serengeti.jpg" alt="serengeti" id="photo3" onclick="ChangeOnClick(document.getElementById('photo3').alt)">
+                              <img src="wenecja.jpg" alt="wenecja" id="photo4" onclick="ChangeOnClick(document.getElementById('photo4').alt)">
+                              <img src="tajlandia.jpg" alt="tajlandia" id="photo5" onclick="ChangeOnClick(document.getElementById('photo5').alt)">
+                    </div>
+
+                    <div id="blockR">
+                              <h3>Obrazy w naszej galerii</h3>
+                              <table>
+                              <tr>
+                                        <td>Europa</td>
+                                        <td>Azja</td>
+                                        <td>Afryka</td>
+                              </tr>
+                              <tr>
+                                        <td>2</td> 
+                                        <td>2</td> 
+                                        <td>1</td>
+                              </tr>
+                              </table>
+                              <p>Polub nas<img src="icon-off.png" onClick="this.src='icon-on.png'" ondblclick="this.src='icon-off.png'" /></p>
+                              <a href="https://pixabay.com/" target="_blank">Odkryj więcej zdjęć</a>
+                    </div>
+
+                    <div id="footer">
+                              Autor: Gabriel Achler
+                    </div>
+
+</body>
+
+          <script>
+                    function ChangeOnClick(photo_fun)
+                    {
+                              if(photo_fun == 'lanzarotte')
+                              document.getElementById('resault').src = 'lanzarotte.jpg'
+                              if(photo_fun == 'pekin')
+                              document.getElementById('resault').src = 'pekin.jpg'
+                              if(photo_fun == 'serengeti')
+                              document.getElementById('resault').src = 'serengeti.jpg'
+                              if(photo_fun == 'wenecja')
+                              document.getElementById('resault').src = 'wenecja.jpg'
+                              if(photo_fun == 'tajlandia')
+                              document.getElementById('resault').src = 'tajlandia.jpg'
+                    }
+          </script>
+</html>
