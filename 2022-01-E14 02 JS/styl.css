@@ -1,0 +1,61 @@
+*{
+               font-family: Garamond;
+               margin: 0;
+}
+
+#logo, #menu{
+               background-color: olive;
+               height: 110px;
+               float: left;
+}
+
+#logo{
+               width: 25%;
+}
+
+#menu{
+               width: 75%;
+}
+
+#baner, #footer{
+               background-color: saddlebrown;
+               color: white;
+               text-align: center;
+               padding: 30px;
+
+}
+
+#leftBlock, #rightBlock{
+               background-color: wheat;
+               width: 50%;
+               height: 450px;
+               font-size: 150%;
+               float: left;
+}
+
+#leftBlock{
+               text-align: center;
+}
+
+h1{
+               letter-spacing: 12px;
+}
+
+a{
+               color: lightgray;
+               padding:  30px;
+               font-size: 150%;
+               line-height: 110px;
+               text-decoration: none;
+}
+
+a:hover{
+               color: white;
+               text-decoration: 1px white underline;
+
+}
+
+#bez3{
+               text-decoration: line-through;
+}
+
