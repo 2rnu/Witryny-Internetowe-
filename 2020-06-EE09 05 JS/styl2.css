@@ -1,0 +1,64 @@
+* {
+    font-family: Helvetica;
+}
+
+#leftLowerBlock, #leftUpperBlock{
+    height: 400px;
+    width: 70%;
+    background-color: Snow;
+}
+
+#left {
+    float: left;
+}
+#right {
+    float: right;
+}
+
+#rightUpperBlock, #rightMiddleBlock {
+    width: 30%;
+    background-color: Steelblue;
+    color: White;
+}
+
+#leftUpperBlock {
+    text-align: center;
+}
+
+#leftLowerBlock {
+    font-size: 150%;
+}
+
+#rightUpperBlock {
+    height: 150px;
+    text-align: center;
+}
+
+#rightMiddleBlock {
+    height: 350px;
+}
+
+#rightLowerBlock {
+    height: 300px;
+    background-color: Snow;
+    text-align: center;
+}
+
+#footer {
+    background-color: steelblue;
+    color: white;
+    clear: both;
+}
+
+h2 {
+    font-size: 250%;
+}
+
+img {
+    padding: 4px;
+}
+
+#obraz2.jpg {
+    padding: 3px;
+    border: solid 1px steelblue;
+}
