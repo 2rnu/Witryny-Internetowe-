@@ -9,10 +9,11 @@
     
 </head>
 <body>
-    <div id="left">
         <div id="leftUpperBlock">
         <a href="index.html"> <h2> SALON FRYZJERSKI </h2> </a>
-        <img src="obraz2.jpg" alt="Czesanie">
+        <div id="obraz2">
+        <img src="obraz2.jpg" alt="Czesanie" id="photo2">
+        </div>
         </div>
 
         <div id="leftLowerBlock">
@@ -21,11 +22,10 @@
             <input type="radio" name="choose" alt="2" value="opt2"> <label for="2">Średnie</label> <br>
             <input type="radio" name="choose" alt="3" value="opt3"> <label for="3">Półdługie</label> <br>
             <input type="radio" name="choose" alt="4" value="opt4"> <label for="4">Długie</label> <br>
-            <input type="button" value="Odkryj promocje" onclick="">
+            <input type="button" value="Odkryj promocje" onclick="Promotion()">
+            <p id="cost"></p>
         </div>
-    </div>
     
-    <div id="right">
         <div id="rightUpperBlock">
             <h2> MENU </h2>
         </div>
@@ -48,10 +48,22 @@
         <div id="rightLowerBlock">
             <img src="obraz1.jpg" alt="Fryzjer">
         </div>
-    </div>
     <div id="footer">
         <p>Autor: Gabriel Achler</p>
     </div>
+
+    <script>
+
+        function Promotion (cost){
+        if(document.getElementById("promo1").checked == true) cost = 25;
+        if(document.getElementById("promo2").checked == true) cost = 30;
+        if(document.getElementById("promo3").checked == true) cost = 40;
+        if(document.getElementById("promo4").checked == true) cost = 50;        
+        
+        document.getElementById("cost").innerHTML = "Cena strzyżenia: " + cost;
+        }
+
+    </script>
 
 </body>
 </html>

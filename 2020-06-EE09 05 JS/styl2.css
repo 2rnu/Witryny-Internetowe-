@@ -8,13 +8,6 @@
     background-color: Snow;
 }
 
-#left {
-    float: left;
-}
-#right {
-    float: right;
-}
-
 #rightUpperBlock, #rightMiddleBlock {
     width: 30%;
     background-color: Steelblue;
@@ -32,6 +25,7 @@
 #rightUpperBlock {
     height: 150px;
     text-align: center;
+
 }
 
 #rightMiddleBlock {
@@ -41,7 +35,9 @@
 #rightLowerBlock {
     height: 300px;
     background-color: Snow;
+    width: 30%;
     text-align: center;
+
 }
 
 #footer {
@@ -58,7 +54,13 @@ img {
     padding: 4px;
 }
 
-#obraz2.jpg {
-    padding: 3px;
-    border: solid 1px steelblue;
+#photo2{
+    padding: 4px;
 }
+ #photo2:hover {
+    border: solid 1px steelblue;
+ }
+
+ main {
+    display: flex;
+ }
