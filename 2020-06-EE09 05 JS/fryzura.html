@@ -8,29 +8,17 @@
     <title> Usługi fryzjerskie </title>
     
 </head>
-<body>
-        <div id="leftUpperBlock">
-        <a href="index.html"> <h2> SALON FRYZJERSKI </h2> </a>
-        <div id="obraz2">
-        <img src="obraz2.jpg" alt="Czesanie" id="photo2">
+<body>      
+        <div id="left1">
+            <a href="index.html"> <h2> SALON FRYZJERSKI </h2> </a>
+            <img src="obraz2.jpg" alt="Czesanie">
         </div>
-        </div>
-
-        <div id="leftLowerBlock">
-            <h3>Dziś promocja na strzyżenie włosów</h3>
-            <input type="radio" name="choose" alt="1" value="opt1"> <label for="1">Krótkie</label> <br>
-            <input type="radio" name="choose" alt="2" value="opt2"> <label for="2">Średnie</label> <br>
-            <input type="radio" name="choose" alt="3" value="opt3"> <label for="3">Półdługie</label> <br>
-            <input type="radio" name="choose" alt="4" value="opt4"> <label for="4">Długie</label> <br>
-            <input type="button" value="Odkryj promocje" onclick="Promotion()">
-            <p id="cost"></p>
-        </div>
-    
-        <div id="rightUpperBlock">
+        
+        <div id="right1">
             <h2> MENU </h2>
         </div>
-
-        <div id="rightMiddleBlock">
+        
+        <div id="right2">
             <ol>
                 <li> <a href="fryzura.html"> Strzyżenie </a> </li>
             <ul>
@@ -42,28 +30,36 @@
                 <li> Czesanie </li>
                 <li> Koloryzacja </li>
             </ol>
-
         </div>
 
-        <div id="rightLowerBlock">
+        <div id="left2">
+            <h3>Dziś promocja na strzyżenie włosów</h3>
+            <input type="radio" name="choose" alt="1" id="opt1"> <label for="1">Krótkie</label> <br>
+            <input type="radio" name="choose" alt="2" id="opt2"> <label for="2">Średnie</label> <br>
+            <input type="radio" name="choose" alt="3" id="opt3"> <label for="3">Półdługie</label> <br>
+            <input type="radio" name="choose" alt="4" id="opt4"> <label for="4">Długie</label> <br>
+            <input type="button" value="Odkryj promocje" onclick="Cost()">
+            <p id="resault"></p>
+        </div>
+    
+        <div id="right3">
             <img src="obraz1.jpg" alt="Fryzjer">
         </div>
-    <div id="footer">
-        <p>Autor: Gabriel Achler</p>
-    </div>
 
-    <script>
+        <div id="footer">
+            <p>Autor: Gabriel Achler</p>
+        </div>
 
-        function Promotion (cost){
-        if(document.getElementById("promo1").checked == true) cost = 25;
-        if(document.getElementById("promo2").checked == true) cost = 30;
-        if(document.getElementById("promo3").checked == true) cost = 40;
-        if(document.getElementById("promo4").checked == true) cost = 50;        
-        
-        document.getElementById("cost").innerHTML = "Cena strzyżenia: " + cost;
-        }
+        <script>
+                function Cost() {
+                var cost = 0;
 
-    </script>
-
+                if(document.getElementById('opt1').checked) cost += 25;
+                if(document.getElementById('opt2').checked) cost += 30 ;
+                if(document.getElementById('opt3').checked) cost += 40;
+                if(document.getElementById('opt4').checked) cost += 50;
+                document.getElementById('resault').innerHTML = "Cena strzyżenia: " + cost;
+            }
+        </script>
 </body>
 </html>
