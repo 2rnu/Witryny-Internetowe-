@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="kilometry">Ile kilometrów do apartamentu?</label>
+    <input type="text" id="kilometry" name="kilometry" /> <br />
+    <label for="gdansk">Czy pochodzę z Gdańska?</label>
+    <input type="checkbox" id="gdansk" name="Jestem z Gdańska" /> <br />
+    <p id="resault"></p>
+    <button onclick="pizzaCost()">Oblicz</button>
+
+    <script>
+      function pizzaCost() {
+        let kilometry = document.getElementById("kilometry").value;
+        let gdansk = document.getElementById("gdansk").checked;
+
+        if (gdansk)
+          document.getElementById("resault").innerHTML =
+            "Dowieziemy twoją pizze za darmo!";
+        else {
+          totalCost = kilometry * 2;
+          resault.innerHTML = "Dowieziemy twoją pizze za " + totalCost;
+        }
+      }
+    </script>
+  </body>
+</html>
