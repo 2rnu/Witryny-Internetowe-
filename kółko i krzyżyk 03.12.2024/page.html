@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1">
+        <button id="field0x1" onclick="gameLogic(0, 0, 'field0x1')"></button>
+        <button id="field0x2" onclick="gameLogic(0, 1, 'field0x2')"></button>
+        <button id="field0x3" onclick="gameLogic(0, 2, 'field0x3')"></button>
+    </div>
+    <div id="box2">
+        <button id="field1x1" onclick="gameLogic(1, 0, 'field1x1')"></button>
+        <button id="field1x2" onclick="gameLogic(1, 1, 'field1x2')"></button>
+        <button id="field1x3" onclick="gameLogic(1, 2, 'field1x3')"></button>
+    </div>
+    <div id="box3">
+        <button id="field2x1" onclick="gameLogic(2, 0, 'field2x1')"></button>
+        <button id="field2x2" onclick="gameLogic(2, 1, 'field2x2')"></button>
+        <button id="field2x3" onclick="gameLogic(2, 2, 'field2x3')"></button>
+    </div>
+    <p id="player">Gracz: X</p>
+    <p id="gameStatus"></p>
+    <button onclick="restartGame()">Restart</button>
+
+    <script>
+        let board = [["", "", ""], 
+                     ["", "", ""], 
+                     ["", "", ""]];
+        let currentPlayer = "X";
+        let gameOver = false;
+
+        function gameLogic(row, col, id) {
+            if (gameOver || board[row][col]) return;
+
+            board[row][col] = currentPlayer;
+            document.getElementById(id).textContent = currentPlayer;
+
+            if (checkWin()) {
+                document.getElementById("gameStatus").textContent = `${currentPlayer} wygrywa!`;
+                gameOver = true;
+            } else if (isBoardFull()) {
+                document.getElementById("gameStatus").textContent = "Remis!";
+                gameOver = true;
+            } else {
+                currentPlayer = currentPlayer === "X" ? "O" : "X";
+                document.getElementById("player").textContent = `Gracz: ${currentPlayer}`;
+            }
+        }
+
+        function checkWin() {
+            for (let i = 0; i < 3; i++) {
+                if (board[i][0] === currentPlayer && board[i][1] === currentPlayer && board[i][2] === currentPlayer) return true;
+                if (board[0][i] === currentPlayer && board[1][i] === currentPlayer && board[2][i] === currentPlayer) return true;
+            }
+            if (board[0][0] === currentPlayer && board[1][1] === currentPlayer && board[2][2] === currentPlayer) return true;
+            if (board[0][2] === currentPlayer && board[1][1] === currentPlayer && board[2][0] === currentPlayer) return true;
+
+            return false;
+        }
+
+        function isBoardFull() {
+            for (let row of board) {
+                for (let cell of row) {
+                    if (cell === "") return false;
+                }
+            }
+            return true;
+        }
+
+        function restartGame() {
+            board = [["", "", ""], ["", "", ""], ["", "", ""]];
+            currentPlayer = "X";
+            gameOver = false;
+            document.getElementById("player").textContent = "Gracz: X";
+            document.getElementById("gameStatus").textContent = "";
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    document.getElementById(`field${i}x${j + 1}`).textContent = "";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
