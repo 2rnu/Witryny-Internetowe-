@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja paliw</title>
+</head>
+<body>
+    <div id="banner">
+        <h1>Całodobowa stacja paliw</h1>
+    </div>
+    <div id="menu">
+        <a href="stacja.html"><img src="home.png"></a>
+        <a href="obliczenia.html"><img src="znak.png"></a>
+        <a href="Kwerendy.txt" download>Pobierz dokument</a>
+    </div>
+    <div id="left">
+    <h2>Orientacyjny koszt paliwa</h2>
+    Rodzaj paliwa (1 - benzyna, 2 - olej napędowy)<br>
+    <input min="0" max="2" id="variety" width="50px" type="number"><br>
+    Ile litrów?<br>
+    <input min="0" id="howMuchFuel" type="number"><br>
+
+    <button onclick="totalCost()">Oblicz</button>
+
+    <p id="resault"></p>
+
+    <script>
+        function totalCost()
+        {
+            let typeFuels = document.getElementById("variety").value;
+            let fuelAmmount = document.getElementById("howMuchFuel").value;
+
+            if (typeFuels == 1) {
+                document.getElementById("resault").innerHTML = "Koszt paliwa (benzyna) wynosi: " + fuelAmmount * 4 + " zł";
+            }
+            else if(typeFuels == 2){
+                document.getElementById("resault").innerHTML = "Koszt paliwa (olej napędowy) wynosi: " + fuelAmmount * 3.5 + " zł";
+            }
+            else{
+                document.getElementById("resault").innerHTML = "Koszt paliwa (nie wybrano) wynosi: 0 zł";
+
+            }
+        }
+    </script>
+    </div>
+    <div id="right">
+        <img class="samochod" src="samochod.jpg" alt="samochód">
+    </div>
+    <div id="footer">
+        <p>Stronę opracował: Gbai</p>
+    </div>
+</body>
+</html>

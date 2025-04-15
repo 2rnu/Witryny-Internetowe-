@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl6.css">
+    <title>Style w JavaScript</title>
+</head>
+<body>
+    <div id="mainLeftBlock">
+        <h1>Konfigurator stylu</h1>
+
+        <p>Podaj kolor tła</p>
+        <button id="indigoButton" onclick="colorChange(`Indigo`)">Indigo</button>
+        <button id="steelBlueButton" onclick="colorChange(`SteelBlue`)">SteelBlue</button>
+        <button id="oliveButton" onclick="colorChange(`Olive`)">Olive</button>
+        <br><br>
+        <p>Podaj kolor czcionki</p>
+        <select onchange="fontColorChange()" id="selection">
+            <option value="White">White</option>
+            <option value="Tan">Tan</option>
+            <option value="Bisque">Bisque</option>
+            <option value="Plum">Plum</option>
+        </select>
+            <br><br>
+            <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+            <input onchange="fontSizeChange()" id="fontSizeValue" placeholder="100%" type="number">
+            <br><br>
+            <p>Czy rysunek ma mieć ramkę?</p>
+            <input onchange="borderChange()" id="borderOnOff" checked type="checkbox">Rysuj ramkę
+            <br><br>
+            <p>Jaki jest typ punktora listy?</p>
+                <input name="type" onclick="changeListStyle('disc')" checked type="radio"> dysk <br>
+                <input name="type" onclick="changeListStyle('square')" type="radio"> kwadrat <br>
+                <input name="type" onclick="changeListStyle('circle')" type="radio"> okrąg <br>
+    </div>
+
+    <div id="mainRightBlock">
+        <img src="gibraltar.jpg" id="gibraltar" alt="półwysep Gibraltar">
+
+        <ul id="list">
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>  
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>        
+
+    </div>
+
+    <footer> Autor: ihsoifhphpf </footer>
+
+    <script>
+        let rightBlockColor = document.getElementById('mainRightBlock');
+
+        function colorChange(color){
+            rightBlockColor.style.backgroundColor = color;
+        }
+
+        function fontColorChange(){
+            let selectedFontColorValue = document.getElementById('selection').value;
+            rightBlockColor.style.color = selectedFontColorValue;   
+        }
+
+        function fontSizeChange() {
+            let fontSizeValue = document.getElementById('fontSizeValue').value;
+            rightBlockColor.style.fontSize = fontSizeValue + "%";
+        }
+
+        function borderChange(){
+
+            let gibraltar = document.getElementById('gibraltar');
+
+            if(borderOnOff.checked){
+                gibraltar.style.border = "solid 1px white";
+            }
+            else
+                gibraltar.style.border = 0;
+        }
+
+        function changeListStyle(style){
+            document.getElementById('list').style.listStyle = style;
+        }
+    </script>
+</body>
+</html>

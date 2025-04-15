@@ -1,0 +1,11 @@
+Zapytanie 1: wybierające jedynie imię, nazwisko i miasto klientów z miast: Legionowo, Warszawa
+SELECT `imie`, `nazwisko`, `login`, `miasto` FROM `klient` WHERE miasto = "Legionowo" OR miasto = "Warszawa";
+
+Zapytanie 2: wybierające jedynie nazwę produktu dla produktów o cenie brutto wyższej od 500 zł
+SELECT `nazwa` FROM `produkty` WHERE cena_brutto > 500;
+
+Zapytanie 3: wybierające nazwę kategorii z tabeli kategorie i odpowiadającą jej wartość średniej arytmetycznej cen brutto produktów tej kategorii z tabeli produkty. Należy posłużyć się relacją
+SELECT `nazwa_kategorii`, AVG(cena_brutto) FROM `produkty`. `kategorie` WHERE produkty.id_kat = kategorie.id_kat GROUP by produkty.id_kat
+
+Zapytanie 4: wybierające id zamówienia, ilość i wartość z tabeli zamowienia oraz odpowiadającą im nazwę produktu z tabeli produkty dla klienta o id równym 2. Należy posłużyć się relacją
+SELECT `id_zam`, `ilosc`, `wartosc`, `nazwa` FROM `zamowienia` JOIN produkty ON zamowienia.id_prod = produkty.id_prod WHERE id_klient = 2;

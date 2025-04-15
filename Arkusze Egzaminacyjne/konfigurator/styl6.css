@@ -1,0 +1,52 @@
+*{
+    font-family: Georgia;
+}
+
+#mainLeftBlock{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+    float: left;
+}
+
+#mainRightBlock{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    overflow: auto;
+    float: left;
+}
+
+footer{
+    background-color: dimgray;
+    color: white;
+    clear: both;
+}
+
+#mainRightBlock img, 
+#mainRightBlock ul {
+    display: inline-block;
+}
+
+#mainRightBlock p{
+    padding: 10px;
+}
+
+#mainRightBlock img{
+    padding: 10px;
+    border: solid 1px white;
+}
+
+#indigoButton{
+    background-color: indigo;
+}
+
+#steelBlueButton{
+    background-color: steelblue;
+}
+
+#oliveButton{
+    background-color: olive;
+}

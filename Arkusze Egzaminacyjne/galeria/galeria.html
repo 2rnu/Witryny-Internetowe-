@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl7.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="banner">
+        <h2>Galeria miejsc ciekawych</h2>
+    </div>
+
+    <main>        
+            <img src="lanzarotte.jpg" id="galeria" alt="galeria">
+    </main>
+
+    <div id="leftBlock">
+        <h3>Przeglądaj zdjęcia</h3>
+
+        <img src="lanzarotte.jpg" onclick="changeMe('lanzarotte')" alt="lanzarotte">
+        <img src="pekin.jpg" onclick="changeMe('pekin')" alt="pekin">
+        <img src="serengeti.jpg" onclick="changeMe('serengeti')" alt="serengeti">
+        <img src="wenecja.jpg" onclick="changeMe('wenecja')" alt="wenecja">
+        <img src="tajlandia.jpg" onclick="changeMe('tajlandia')" alt="tajlandia">
+    </div>
+
+    <div id="rightBlock">
+        <h3>Obrazy w naszej galerii</h3>
+        <table>
+            <tr>
+                <th>Europa</th>
+                <th>Azja</th>
+                <th>Afryka</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>2</th>
+                <th>1</th>
+            </tr>
+        </table>
+
+        <p>Polub nas <img src="icon-off.png" onclick="likeUs(document.getElementById('serce').alt)" id="serce" alt="icon-off"></p>
+        <a href="https://pixabay.com" target="_blank">Odkryj wiecęj zdjęć</a>
+    </div>
+
+    <footer>
+        Autor: aijjposfjs
+    </footer>
+
+    <script>
+        function changeMe(photo)
+        {
+            document.querySelector("#galeria").src = photo + ".jpg";
+        }
+
+        function likeUs(symbol) {
+            if (document.getElementById('serce').alt == "icon-off") 
+            {
+                document.getElementById('serce').src = "icon-on" + ".png";
+                document.getElementById('serce').alt = "icon-on"
+            }
+            else
+            {
+            document.getElementById('serce').src = "icon-off" + ".png";
+            document.getElementById('serce').alt = "icon-off"
+            }
+        }
+    </script>
+</body>
+</html>

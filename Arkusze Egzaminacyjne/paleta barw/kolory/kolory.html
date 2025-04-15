@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl2.css">
+    <title>Pomocnik CSS</title>
+</head>
+<body>
+    <div id="container">
+
+            <div id="firstBanner">
+                <h1>Pomocnik CSS</h1>
+            </div>
+
+            <div id="secondBanner">
+                <ul>
+                    <li><a href="kolory.html">Kolory</a></li>
+                    <li><a href="czcionki.html">Czcionki</a></li>
+                    <li><a href="style.html">Style CSS</a></li>
+                    <li><a href="https://www.w3schools.com/css/" target="_blank">Pomoc</a></li>
+                </ul>
+            </div>
+
+        <main>
+            <h2>Podaj składową H koloru w kodzie HSL</h2>
+            <p>0 do 30 czerwienie, do 60 żółcie, do 150 zielenie, do 250 niebieskie, do 360 fiolet i purpura</p>
+            <img src="kolory.jpg" alt="Przestrzeń barw HSL"><br>
+            <input id="HSL" max="360" placeholder="0 - 360" type="number">
+            <button onclick="hslManipulation()">Generuj paletę</button>
+
+            <table>
+                <tr>
+                    <th id="mainColor" colspan="4">Kolor główny</th>
+                </tr>
+                <tr>
+                    <td id="mainColor-20%">Kolor 2</td>
+                    <td id="mainColor-40%">Kolor 3</td>
+                    <td id="mainColor-60%">Kolor 4</td>
+                    <td id="mainColor-80%">Kolor 5</td>
+                </tr>
+            </table>
+        </main>
+
+        <footer>
+            Autor: jfosjfposfjpo
+        </footer>
+
+        <script>
+            function hslManipulation(){
+                let hslValue = document.getElementById("HSL").value;
+
+                document.getElementById("mainColor").style.backgroundColor = `hsl(${hslValue}, 100%, 50%)`;
+                document.getElementById("mainColor-20%").style.backgroundColor = `hsl(${hslValue}, 80%, 50%)`;
+                document.getElementById("mainColor-40%").style.backgroundColor = `hsl(${hslValue}, 60%, 50%)`;
+                document.getElementById("mainColor-60%").style.backgroundColor = `hsl(${hslValue}, 40%, 50%)`;
+                document.getElementById("mainColor-80%").style.backgroundColor = `hsl(${hslValue}, 20%, 50%)`;
+            }
+        </script>
+    </div>
+</body>
+</html>

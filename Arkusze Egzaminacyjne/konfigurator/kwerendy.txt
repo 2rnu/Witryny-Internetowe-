@@ -1,0 +1,11 @@
+Zapytanie 1: tworzące użytkownika Agnieszka z hasłem haslo4
+CREATE USER 'ag41'@'localhost' IDENTIFIED BY 'haslo4';
+
+Zapytanie 2: liczące w tabeli samochody średnią arytmetyczną roczników samochodów, których marką jest opel
+SELECT AVG(rocznik) FROM samochody WHERE marka = 'Opel';
+
+Zapytanie 3: wybierające jedynie nazwy marek samochodów i imiona klientów z nimi powiązane za pomocą tabeli wypozyczenia. Zapytanie wykorzystuje relację wiele do wielu pomiędzy trzema tabelami
+SELECT samochody.marka, klienci.imie FROM samochody JOIN wypozyczenia ON samochody.id = wypozyczenia.samochody_id JOIN klienci ON klienci.id = wypozyczenia.klienci_id;
+
+Zapytanie 4: usuwające kolumnę cena z tabeli klasa
+ALTER TABLE klasa DROP COLUMN cena;
