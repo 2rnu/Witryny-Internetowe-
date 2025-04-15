@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="guests"> Ilość gości: </label>
+    <input
+      text="number"
+      id="guests"
+      name="guests"
+      onchange="calculateWeedingCost()"
+    />
+    <br />
+    <label for="vodka"> Poprawiny? </label>
+    <input type="checkbox" id="vodka" name="vodka" />
+    <p id="result"></p>
+
+    <script>
+      const guests = document.getElementById("guests");
+      const vodka = document.getElementById("vodka").checked;
+
+      function calculateWeedingCost() {
+        let weedingCost = guests.value * 100;
+        document.querySelector("#result").innerHTML = `Całkowity koszt wesela to ${weedingCost}`;
+      };
+    </script>
+  </body>
+</html>

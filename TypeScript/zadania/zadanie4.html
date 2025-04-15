@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Sumy</title>
+</head>
+<body>
+    <h1>Formularz Sumy</h1>
+    <form onsubmit="event.preventDefault(); calculateSum();">
+        <div>
+            <input type="checkbox" id="cb1">
+            <input type="text" id="num1" placeholder="Liczba całkowita">
+        </div>
+        <div>
+            <input type="checkbox" id="cb2">
+            <input type="text" id="num2" placeholder="Liczba całkowita">
+        </div>
+        <div>
+            <input type="checkbox" id="cb3">
+            <input type="text" id="num3" placeholder="Liczba całkowita">
+        </div>
+        <div>
+            <input type="checkbox" id="cb4">
+            <input type="text" id="num4" placeholder="Liczba całkowita">
+        </div>
+        <div>
+            <input type="checkbox" id="cb5">
+            <input type="text" id="num5" placeholder="Liczba całkowita">
+        </div>
+        <button type="submit">Oblicz sumę</button>
+    </form>
+    <div id="result">Suma: 0</div>
+
+    <script>
+        function calculateSum() {
+            let sum = 0;
+
+            for (let i = 1; i <= 5; i++) {
+                const checkbox = document.getElementById(`cb${i}`);
+                const input = document.getElementById(`num${i}`);
+                if (checkbox.checked) {
+                    const value = parseInt(input.value) || 0;
+                    sum += value;
+                }
+            }
+            document.getElementById('result').innerText = 'Suma: ' + sum;
+        }
+    </script>
+
+</body>
+</html>

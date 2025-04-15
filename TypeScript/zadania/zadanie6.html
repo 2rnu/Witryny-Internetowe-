@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="ilosc">Ile cegieł?</label>
+    <input type="number" id="ilosc" /><br />
+    <label for="premium">Premium:</label>
+    <input type="checkbox" id="premium" />
+    <p id="result"></p>
+
+    <button onclick="costOfEverything()">Oblicz</button>
+
+    <script>
+      function costOfEverything() {
+        const ilosc = document.getElementById("ilosc");
+        const waga = document.getElementById("waga");
+        const premium = document.getElementById("premium").checked;
+
+        let brickPrice = weightOfBrick * 2;
+        let premiumBrick = weightOfPremiumBrick * (2 * 1.3);
+        let weightOfBrick = 1.5;
+        let weightOfPremiumBrick = 1.75;
+
+        if (premium) {
+          document.getElementById("result").innerHTML =
+            "Zakupiona ilość zegieł:" +
+            ilosc +
+            "wybrano opcje cegły premium, koszt zakupu cegieł" +
+            premiumBrick +
+            "zł, waga cegieł wynosi:" +
+            waga;
+        }
+      }
+    </script>
+  </body>
+</html>

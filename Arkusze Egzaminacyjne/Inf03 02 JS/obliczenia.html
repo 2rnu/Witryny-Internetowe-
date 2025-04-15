@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl=PL">
+	<head>
+		<meta charset="UTF-8">
+		<title>Stacja paliw</title>
+		<link rel="stylesheet" href="styl2.css">
+	</head>
+	<body>
+		
+			<div id="banner">
+				<h1>Całodobowa stacja paliw</h1>
+			</div>
+
+			<div id="menu">
+				<a href="stacja.html"><img src="home.png" style="width:80px;"></a> 
+				<a href="obliczenia.html"><img src="znak.png" style="width:80px;"></a>
+
+				<a href=""><p>Pobierz dokumenty</p></a>
+			</div>
+			<div style="display:flex">
+			<div id="blockL">
+				<h2>Orientacyjny koszt paliwa</h2>
+
+                                        <label for ="paliwo">Rodzaj paliwa (1- benzyna, 2 - olej napędowy)</label>
+                                        <br>
+                                        <input type="number" id="paliwo" min="0" max="2">
+                                        <br>
+                                        <label for ="litry">Ile litrów?</label>
+                                        <br>
+                                        <input type="number" id="litry">
+                                        <br>
+                                        <input type="submit" value="Oblicz" onclick="Oblicz()"/>
+										<p id = "l_koszt"></p>
+			</div>
+
+			<div id="blockR">
+				<div id="photo">
+					<img alt="samochod" src="samochod.jpg">
+				</div>
+			</div>
+			</div>
+			<div id="footer">
+				<p>Stronę opracował: Gabriel Achler</p>
+                              </div>
+	</body>
+
+                    <script>
+						function Oblicz()
+						{
+                            let paliwo = document.getElementById("paliwo").value
+                            let litry = document.getElementById("litry").value
+
+							if (paliwo == 1) {
+								cena = 4 * litry;
+							}
+							else if (paliwo == 2) {
+								cena = 3.5 * litry;
+							}
+							else{
+								cena = 0;
+							}
+							document.getElementById("l_koszt").innerHTML = "Koszt paliwa: " + cena + " zł."
+						}
+                            
+                    </script>
+</html>

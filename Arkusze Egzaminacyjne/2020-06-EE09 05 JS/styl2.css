@@ -1,0 +1,62 @@
+* {
+    font-family: Helvetica;
+}
+
+#left1, #left2 {
+    width: 70%;
+    float: left;
+}
+#right1, #right2, #right3{
+    width: 30%;
+    float: right;
+}
+
+#left1 {
+    text-align: center;
+    height: 400px;
+    background-color: Snow;
+}
+
+#left2 {
+    font-size: 150%;
+    height: 400px;
+    background-color: Snow;
+}
+
+#right1 {
+    height: 150px;
+    text-align: center;
+    background-color: Steelblue;
+    color: White;
+}
+
+#right2 {
+    height: 350px;
+    background-color: Steelblue;
+    color: White;
+}
+
+#right3 {
+    height: 300px;
+    background-color: Snow;
+    text-align: center;
+}
+
+#footer {
+    background-color: steelblue;
+    color: white;
+    clear: both;
+}
+
+h2 {
+    font-size: 250%;
+}
+
+img {
+    padding: 4px;
+}
+
+img:hover {
+    padding: 3px;
+    border: solid 1px steelblue;
+}

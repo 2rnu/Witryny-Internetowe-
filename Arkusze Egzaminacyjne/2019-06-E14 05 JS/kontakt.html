@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+               <meta charset="UTF-8">
+               <meta http-equiv="X-UA-Compatible" content="IE=edge">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Usługi informatyczne</title>
+               <link rel="stylesheet" href="styl.css">
+               <img href="logo.png">
+</head>
+<body>
+               <div id="container">
+                              <div id="logo">
+                                             <img src="logo.png" alt="logo firmy">
+                              </div>
+
+                              <div id="menu">
+                                             <a href="index.html"> O nas </a>
+                                             <a href="uslugi.html"> Usługi </a>
+                                             <a href="kontakt.html"> Kontakt </a>
+                              </div>
+
+                              <div id="banner">
+                                             <img src="grafika2.jpg">
+                              </div>
+
+                              <div id="main">
+                                             <hr>
+                                             <h2> Oferowane usługi </h2>
+                                             
+                                             <table>
+                                             <label for="name"> Imię: </label> <input type="text" id="name" alt="name" min="2" max=""> <br>
+                                             <label for="surname"> Nazwisko: </label> <input type="text" id="surname" alt="surname"> <br>
+                                             <label for="email"> E-mail: </label> <input type="email" id="email" alt="email"> <br>
+                                             <label for="textbox"> Usługa: </label> <input type="text" multiple id="text" alt="textbox"> <br>
+                                             <input type="checkbox" id="form" alt="form"> <label for="form"> Zapoznałam/em się z regulaminem</label> <br>
+                                             <input type="button" id="reset" value="Resetuj" onclick="reset()">
+                                             <input type="button" id="yes" value="Prześlij" onclick="correctForm()">
+
+                                             <p id="resault1"></p>
+                                             <p id="resault"></p>
+                                             <p id="resault0"></p>
+                                             
+                                             </table>
+                                             <hr>
+                              </div>
+
+                              <div id="footer">
+                                             Autor strony: Gabriel Achler
+                              </div>
+               </div>
+
+               <script>
+                              function reset () {
+                              document.getElementById("name").innerHTML = ""
+                              document.getElementById("surname").innerHTML = "";
+                              document.getElementById("email").innerHTML = "";
+                              }
+
+                       function correctForm () {
+                              let name = document.getElementById("name").value;
+                              let surname = document.getElementById("surname").value;
+                              let text = document.getElementById("text").value;
+
+                              if(form.checked == true) document.getElementById("resault1").innerHTML = name + surname;
+                              else document.getElementById("resault1").innerHTML = resault1 = "Musisz zapoznać się z regulaminem";
+
+                              if(form.checked == true) document.getElementById("resault").innerHTML = "Treść Twojej sprawy:" + text ;
+                              else document.getElementById("resault").innerHTML = "";
+
+                              if(form.checked == true) document.getElementById("resault0").innerHTML = "Na podany e-mail zostanie wysłana oferta." ;
+                              else document.getElementById("resault").innerHTML = "";
+
+
+
+                              
+
+
+
+
+ 
+}      
+               </script>
+               
+</body>
+</html>
